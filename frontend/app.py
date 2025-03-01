@@ -83,7 +83,7 @@ def create_taxi_map(shapefile_path, prediction_data):
 
     # Merge with cleaned column names
     nyc_zones = nyc_zones.merge(
-        prediction_data[["pickup_location_id", "predicted_demand","zone"]],
+        prediction_data[["pickup_location_id", "predicted_demand"]],
         left_on="LocationID",
         right_on="pickup_location_id",
         how="left",

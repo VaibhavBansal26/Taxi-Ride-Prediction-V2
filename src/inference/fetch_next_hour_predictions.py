@@ -10,7 +10,6 @@ def fetch_next_hour_predictions():
     fs = get_feature_store()
     fg = fs.get_feature_group(name=config.FEATURE_GROUP_MODEL_PREDICTION, version=1)
     df = fg.read()
-    print(df)
     # Then filter for next hour in the DataFrame
     df = df[df["pickup_hour"] == next_hour]
 
