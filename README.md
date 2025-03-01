@@ -26,3 +26,15 @@ Streamlit
 Objective - 
 1. Ride Next Hour Prediction
 2. Model Monitoring App
+
+
+Github Workflows
+1. Feature Pipeline - Fetch New Data From Feature Pipeline and Load Data to Hopsworks (Cron Job runs every hour - feature_pipeline.yml)
+2. Training Pipeline - (training_pipeline.yml) 
+3. Inference Pipeline - (inference_pipeline.yml)
+
+
+Workflow
+1. Data Ingestion
+   a. Fetch Raw Data From NYC taxi ride API
+   b. Filter Data (Include Only Valid Data for specific date range)
