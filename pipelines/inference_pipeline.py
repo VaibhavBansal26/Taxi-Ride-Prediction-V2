@@ -45,7 +45,7 @@ feature_group = get_feature_store().get_or_create_feature_group(
     name=config.FEATURE_GROUP_MODEL_PREDICTION,
     version=1,
     description="Predictions from LGBM Model V2",
-    primary_key=["pickup_location_id", "pickup_hour",'zone'],
+    primary_key=["pickup_location_id", "pickup_hour"],
     event_time="pickup_hour",
 )
 
