@@ -286,7 +286,7 @@ top10 = (
 )
 for location_id in top10:
     fig = plot_prediction(
-        features=features[features["pickup_location_id"] == location_id],
+        features=features[features["pickup_location_id"] == location_id,'zone'],
         prediction=predictions[predictions["pickup_location_id"] == location_id],
     )
     st.plotly_chart(fig, theme="streamlit", use_container_width=True)
